@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Event</title>
+</head>
+<body>
+    <p id="text"></p>
+    <input id="getInput" type="text">
+    <button id="input-button">update</button>
+    <button onclick="onlyfunction()">Using Function event</button>
+    <button id="clicking-method">directly add</button>
+
+
+
+
+
+    <script>
+        //only function
+        function onlyfunction(){
+            const p = document.getElementById('text');
+            p.innerText = 'This event is only using function';
+        }
+
+        //direct
+        document.getElementById('clicking-method').addEventListener('click',function(){
+            const p = document.getElementById('text');
+            p.innerText = 'this event is driectly used function';
+        })
+
+        //directly input field
+        document.getElementById('input-button').addEventListener('click',function(){
+            const input = document.getElementById('getInput');
+            // console.log(input.value);
+
+            const p = document.getElementById('text');
+            //in paragraph we use.innertext and for input use value
+            p.innerText = input.value;
+            input.value = "";
+        })
+
+    </script>
+</body>
+</html>
