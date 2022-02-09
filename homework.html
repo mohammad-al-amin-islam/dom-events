@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+<body>
+    <section>
+        <input id="input1" type="text">
+        <button id="button1" >Button 1</button>
+        <input id="input2" type="text">
+        <button id="button2" >Button 2</button>
+        <br>
+        <button id="merge-button">Merge Button</button>
+    </section>
+    <script>
+        const input = document.getElementById('input1');
+        document.getElementById('button1').addEventListener('click',function(){
+            console.log(input.value);
+            input.value = "";
+        })
+        const input2 = document.getElementById('input2');
+        document.getElementById('button2').addEventListener('click',function(){
+            console.log(input2.value);
+            input2.value = "";
+        })
+        document.getElementById('merge-button').addEventListener('click',function(){
+            console.log(input1.value + input2.value);
+            input.value = "";
+            input2.value = "";
+        })
+    </script>
+</body>
+</html>
